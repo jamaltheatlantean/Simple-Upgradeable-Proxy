@@ -6,5 +6,9 @@ async function main() {
     const box = await upgradeables.deployProxy(Box, [42], {
         initializer: "initialize",
     });
-    awiat box.deployed()
+    await box.deployed()
+
+    console.log("Box deployed at:", box.address);
 }
+
+main()
